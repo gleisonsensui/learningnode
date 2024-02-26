@@ -1,13 +1,386 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IMC Calculator</title>
-</head>
-<body>
-    <header></header>
-    <main></main>
+<html lang="pi-BR">
+  <head>
+    <!--    Metatags importantes    -->
+    <title>Basic HTML e CSS</title>
+    <meta charset="UTF-8" />
+    <!-- Renderiza o latin format language-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Tag de configuração do navegador detectar o device que acessa a pagina -->
+    <meta name="description" content="Conteudo basico de html e css" />
+    <!-- Tag para realizar a descrição do conteudo da pagina -->
+    <meta name="keywords" content="html5, css3, JavaScript, Node" />
+    <!-- Tag com palavras-chaves para facilitar a localização da pagina pelos buscadores -->
+    <meta name="author" content="Gleison (sensui) Nascimento" />
+    <!-- Tag que descreve o autor da pagina -->
+    <!--    Area de integração com arquivos externos    -->
+    <link
+      rel="shortcut icon"
+      href="../public/img/favicon.ico"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="../public/styles/stylesGenerales.css" />
+  </head>
+  <body>
+    <!--  html comments: -->
+    <!--  Navegação da pagina -->
+    <header class="cabecalho">
+      <div class="container">
+        <div class="logo">
+          <img src="../public/img/logomarca.png" alt="logomarca do Gleison Sensui" />
+        </div>
+        <nav class="navbar">
+          <ul>
+            <li><a href="#form-area">Formulario</a></li>
+            <li><a href="#midia-area">Midias</a></li>
+            <li><a href="#list-area">Listas</a></li>
+            <li><a href="#table-area">Tabelas</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="ghost"></div>
+    <!--    Area de conteudo principal do documento html    -->
+    <main>
+      <h1>O basico de HTML5 e CSS</h1>
+      <section id="form-area">
+        <h3>Area de Formulario</h3>
+        <form action="">
+          <fieldset>
+            <legend>Dados do Usuário</legend>
+            <input
+              type="text"
+              placeholder="Digite seu nome completo"
+              id="user-name"
+              name="user-name"
+              class="block"
+            />
+            <fieldset class="checkbox-box">
+              <legend>Hobbies</legend>
+              <div class="hobbies-box">
+                <label for="phisical-activities">Malhar</label>
+                <input
+                  type="checkbox"
+                  name="phisical-activities"
+                  id="phisical-activities"
+                />
+              </div>
+              <div class="hobbies-box">
+                <label for="play-games">Jogar Video Games</label>
+                <input type="checkbox" name="play-games" id="play-games" />
+              </div>
+              <div class="hobbies-box">
+                <label for="play-soccer">Jogar futebol</label>
+                <input type="checkbox" name="play-soccer" id="play-soccer" />
+              </div>
+              <div class="hobbies-box">
+                <label for="to-Read">Ler</label>
+                <input type="checkbox" name="Read" id="Read" />
+              </div>
+              <div class="hobbies-box">
+                <label for="to-study">Estudar</label>
+                <input type="checkbox" name="to-study" id="to-study" />
+              </div>
+              <div class="hobbies-box">
+                <label for="to-fun">Balada</label>
+                <input type="checkbox" name="to-fun" id="to-fun" />
+              </div>
+            </fieldset>
+
+            <input
+              type="email"
+              placeholder="Digite seu e-mail"
+              id="user-email"
+              name="user-email"
+              class="block"
+            />
+            <!--    Input Radio-->
+            <div class="radio-box">
+              <div class="gender-box">
+                <label for="user-male">Masculino</label>
+                <input
+                  type="radio"
+                  name="genero"
+                  value="masculino"
+                  id="user-male"
+                  class="user-gender"
+                />
+              </div>
+              <div class="gender-box">
+                <label for="user-female">Feminino</label>
+                <input
+                  type="radio"
+                  name="genero"
+                  value="feminino"
+                  id="user-female"
+                  class="user-gender"
+                />
+              </div>
+            </div>
+            <input
+              type="date"
+              placeholder="Digite sua data de nascimento"
+              id="user-birthday"
+              name="user-birthday"
+              class="block"
+            />
+
+            <!--    Input com quantidade maxima de caracteres limitados -->
+            <input
+              type="text"
+              placeholder="Digite o numero do seu documento (maximo 11 caracteres)"
+              id="user-cpf"
+              name="user-cpf"
+              maxlength="11"
+              class="block"
+            />
+            <input
+              type="text"
+              placeholder="Digite seu endereço completo"
+              id="user-address"
+              name="user-address"
+              class="block"
+            />
+            <input
+              list="estados"
+              placeholder="Selecione seu estado"
+              class="block"
+            />
+            <datalist id="estados" name="user-state">
+              <option value="Distrito Federal"></option>
+              <option value="Goiás"></option>
+              <option value="Mato Grosso"></option>
+              <option value="Mato Grosso do Sul"></option>
+              <option value="Alagoas"></option>
+              <option value="Bahia"></option>
+              <option value="Ceará"></option>
+              <option value="Maranhão"></option>
+              <option value="Paraíba"></option>
+              <option value="Pernambuco"></option>
+              <option value="Piauí"></option>
+              <option value="Rio Grande do Norte"></option>
+              <option value="Sergipe"></option>
+              <option value="Acre"></option>
+              <option value="Amapá"></option>
+              <option value="Amazonas"></option>
+              <option value="Pará"></option>
+              <option value="Rondônia"></option>
+              <option value="Roraima"></option>
+              <option value="Tocantins"></option>
+              <option value="Espírito Santo"></option>
+              <option value="Minas Gerais"></option>
+              <option value="Rio de Janeiro"></option>
+              <option value="São Paulo"></option>
+              <option value="Paraná"></option>
+              <option value="Santa Catarina"></option>
+              <option value="Rio Grande do Sul"></option>
+            </datalist>
+          </fieldset>
+        </form>
+      </section>
+      <section id="midia-area">
+        <h2>Area de Midias</h2>
+        <section>
+          <h2>Area de fotos e imagens</h2>
+          <p>
+            Essa area tem como objetico aplicar o uso de tags como
+            &lt;picture&gt;; &lt;figure&gt;; &lt;figCaption&gt; e &lt;img&gt;
+          </p>
+          <picture>
+            <source
+              media="(min-width: 650px)"
+              srcset="../public/img/css3.png"
+            />
+            <source
+              media="(min-width: 465px)"
+              srcset="../public/img/css3.png"
+            />
+            <figure>
+              <img src="../public/img/css3.png" alt="Imagem css3" />
+              <figcaption>Imagem CSS3</figcaption>
+            </figure>
+          </picture>
+          <picture>
+            <source
+              media="(min-width: 650px)"
+              srcset="../public/img/html5.png"
+            />
+            <source
+              media="(min-width: 465px)"
+              srcset="../public/img/html5.png"
+            />
+            <figure>
+              <img src="../public/img/html5.png" alt="Imagem css3" />
+              <figcaption>Imagem html5</figcaption>
+            </figure>
+          </picture>
+          <picture>
+            <source
+              media="(min-width: 650px)"
+              srcset="../public/img/javascript.png"
+            />
+            <source
+              media="(min-width: 465px)"
+              srcset="../public/img/javascript.png"
+            />
+            <figure>
+              <img src="../public/img/javascript.png" alt="Imagem JavaScript" />
+              <figcaption>Imagem JavaScript</figcaption>
+            </figure>
+          </picture>
+        </section>
+        <section>
+          <h2>Area de Videos</h2>
+          <video controls>
+            <source
+              src="../public/videos/production_id_4043985 (240p).mp4"
+              type="video/mp4"
+            />
+          </video>
+          <p>
+            Video by
+            <a
+              href="https://www.pexels.com/pt-br/video/discoteca-casa-noturna-balada-musica-4043985/"
+              >StefWithAnF</a
+            >
+            from <a href="https://www.pexels.com/pt-br/">Pexels.</a>
+          </p>
+        </section>
+        <section>
+          <h2>Area de audios</h2>
+          <audio controls>
+            <source src="../public/audios/perfect-beauty-191271.mp3" />
+          </audio>
+          <p>
+            Music by
+            <a
+              href="https://pixabay.com/pt/users/daddy_s_music-22836301/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=191271"
+              >Zakhar Valaha</a
+            >
+            from
+            <a
+              href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=191271"
+              >Pixabay</a
+            >
+          </p>
+        </section>
+      </section>
+      <section id="list-area">
+        <h2>Area de listas</h2>
+        <p>Esta area está dedicada ao uso de tags de lista</p>
+        <section>
+          <h3>Lista não-ordenada</h3>
+          <ul class="unordened-list">
+            <caption>
+              Lista de compras
+            </caption>
+            <li>Arroz</li>
+            <li>Feijão</li>
+            <li>Açucar</li>
+            <li>Oleo-de-soja</li>
+            <li>Macarrão</li>
+          </ul>
+        </section>
+        <section>
+          <h3>Lista ordenada</h3>
+          <ol>
+            <caption>
+              Lista de afazeres
+            </caption>
+            <li>Treinar</li>
+            <li>Trabalhar</li>
+            <li>Estudar</li>
+            <li>Ajudar em casa</li>
+          </ol>
+        </section>
+        <aside>
+          <h3>Lista descritiva</h3>
+          <dl>
+            <caption>
+              Lista de descrição de linguagens de programação
+            </caption>
+            <dt>JavaScript</dt>
+            <dd>
+              avaScript é uma linguagem de programação interpretada estruturada,
+              de script em alto nível com tipagem dinâmica fraca e
+              multiparadigma. Juntamente com HTML e CSS, o JavaScript é uma das
+              três principais tecnologias da World Wide Web.
+            </dd>
+            <dt>Java</dt>
+            <dd>
+              Java é uma linguagem de programação orientada a objetos
+              desenvolvida na década de 90 por uma equipe de programadores
+              chefiada por James Gosling, na empresa Sun Microsystems, que em
+              2008 foi adquirido pela empresa Oracle Corporation.
+            </dd>
+            <dt>PHP</dt>
+            <dd>
+              PHP é uma linguagem interpretada livre, usada originalmente apenas
+              para o desenvolvimento de aplicações presentes e atuantes no lado
+              do servidor, capazes de gerar conteúdo dinâmico na World Wide Web.
+            </dd>
+            <dt>Python</dt>
+            <dd>
+              Python é uma linguagem de programação de alto nível, interpretada
+              de script, imperativa, orientada a objetos, funcional, de tipagem
+              dinâmica e forte. Foi lançada por Guido van Rossum em 1991.
+            </dd>
+            <dt>Ruby</dt>
+            <dd>
+              Ruby é uma linguagem de programação interpretada multiparadigma,
+              de tipagem dinâmica e forte, com gerenciamento de memória
+              automático, originalmente planejada e desenvolvida no Japão em
+              1995, por Yukihiro "Matz" Matsumoto, para ser usada como linguagem
+              de script.
+            </dd>
+          </dl>
+        </aside>
+        <section>
+          <h3>Data Lista inteligente</h3>
+          <input list="animais" />
+          <datalist id="animais">
+            <option value="Cachorro"></option>
+            <option value="Gato"></option>
+            <option value="Cavalo"></option>
+            <option value="Leão"></option>
+            <option value="Tigre"></option>
+            <option value="Elefante"></option>
+          </datalist>
+        </section>
+      </section>
+      <section id="table-area">
+        <h3>Area de Tabela</h3>
+        <table>
+          <caption>
+            Lista de produtos
+          </caption>
+          <thead>
+            <tr>
+              <th>Produto</th>
+              <th>Estoque</th>
+              <th>Valor unitario</th>
+              <th>Valor Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Caneta BIC azul</td>
+              <td>100</td>
+              <td>&real;&dollar; 3.00</td>
+              <td>&real;&dollar; 300.00</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td>Total</td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tfoot>
+        </table>
+      </section>
+    </main>
     <footer></footer>
-</body>
+  </body>
 </html>
