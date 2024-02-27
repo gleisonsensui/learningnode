@@ -1,3 +1,11 @@
+:root {
+    --clear-blue: #cae1f1;
+    --clear-two-blue: #b7d5eb;
+    --clear-three-blue: #c5eff7;
+    --header-color: #2574a9;
+
+}
+
 
 @font-face {
     font-family: "Roboto";
@@ -22,25 +30,90 @@ a {
 
 /*  Setting style navbar rules  */
 header {
+    position: fixed;
     width: 100%;
+    z-index: 1;
+    background-color: var(--header-color);
 }
+
+.ghost {
+    width: 100%;
+    height: 100px;
+    background-color: var(--header-color);
+}
+
 
 .container {
     max-width: 90%;
+    height: 100px;
     margin: 0 auto;
     padding: 0 4rem;
+    /*  Construindo um grid template responsive */
+    display: grid;
+    grid-template-areas: "lgo ... nav";
+    grid-template-columns: auto 1fr auto;
+    align-content: center;
+}
+
+.container img {
+    height: 100px;
+}
+
+.logo {
+    grid-area: lgo;
 }
 
 
-/*  Setting style main content rules    */
+.navbar {
+    display: grid;
+    font-size: 18px;
+    grid-area: nav;
+    align-content: center;
+}
+
+.navbar ul {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 20px;  
+}
+
 
 .navbar li {
     list-style: none;
 }
 
-section {
-    padding: 5px;
+.navbar a {
+    font-size: 1em;
+    color: var(--clear-three-blue);
+    text-transform: uppercase;
 }
+
+
+/*  Setting style main content rules    */
+main {
+    font-size: 20px;
+}
+
+section {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+
+    font-family: "Roboto", Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1em;
+}
+
+section:nth-child(even) {
+    height: 100vh;
+    background-color: var(--clear-blue);
+
+}
+
+section:nth-child(odd) {
+    height: 100vh;
+    background-color: var(--clear-two-blue);
+}
+
 
 table, th, tr, td {
     padding: 5px;
@@ -52,29 +125,29 @@ video {
     display: block;
 }
 
-#midia-area {
-    border: 2px solid blue;
-    margin-bottom: 5px;
+#midia-area h2 {
+    text-align: center;
 }
 
-#list-area {
-    border: 2px solid green;
-    margin-bottom: 5px;
+.container-midia {
+    
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 4rem;
+        /*  Construindo um flex template responsive */
+        display: flex;
+        justify-content:space-between;
+        align-items: center;
+        
 }
 
-
-
-#table-area {
-    border: 2px solid purple;
-    margin-bottom: 5px;
+.img-box {
+    display: flex;
 }
 
-
-#form-area {
-    border: 2px solid purple;
-    margin-bottom: 5px;
+.img-section, .video-section, .audio-section {
+    max-width: 33%;    
 }
-
 
 #form-area input {
     display: block;
