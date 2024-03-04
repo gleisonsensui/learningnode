@@ -33,7 +33,18 @@ header {
     position: fixed;
     width: 100%;
     z-index: 1;
+    font-size: 18px;
+    transition: all ease 0.4s;
+}
+
+.max-header {
     background-color: var(--header-color);
+    height: 100px;
+}
+
+.min-header {
+    background-color: var(--clear-three-blue);
+    height: 80px;
 }
 
 .ghost {
@@ -45,7 +56,7 @@ header {
 
 .container {
     max-width: 90%;
-    height: 100px;
+    height: 100%;
     margin: 0 auto;
     padding: 0 4rem;
     /*  Construindo um grid template responsive */
@@ -63,10 +74,30 @@ header {
     grid-area: lgo;
 }
 
+.max-logo {
+    height: 100px;
+
+}
+
+.min-logo {
+    height: 80px;
+
+}
+
+.max-logo img {
+    height: 100%;
+    transition: all ease 2s;
+
+}
+
+.min-logo img{
+    height: 100%;
+    
+}
+
 
 .navbar {
     display: grid;
-    font-size: 18px;
     grid-area: nav;
     align-content: center;
 }
@@ -82,12 +113,18 @@ header {
     list-style: none;
 }
 
-.navbar a {
+.max-navbar {
     font-size: 1em;
     color: var(--clear-three-blue);
     text-transform: uppercase;
 }
 
+.min-navbar {
+    font-size: 0.8em;
+    font-weight: bold;
+    color: var(--header-color);
+    text-transform: uppercase;
+}
 
 /*  Setting style main content rules    */
 main {
