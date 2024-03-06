@@ -162,6 +162,9 @@ video {
     display: block;
 }
 
+.form-submit {
+    margin-top: 25px;
+}
 #midia-area h2 {
     text-align: center;
 }
