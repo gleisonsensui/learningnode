@@ -16,8 +16,6 @@ function toggleHeader() {
         $header.classList.remove('max-header');
         $header.classList.add('min-header');
         $imgLogo.setAttribute('src', '../public/img/logomarca_sensui2.png');
-        $imgLogo.style.transition('all ease 0.5s')
-        $imgLogo.style.heigth('100%')
         $logo.classList.remove('max-logo');
         $logo.classList.add('min-logo');
         $ghost.classList.remove('max-header');
